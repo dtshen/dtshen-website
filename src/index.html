@@ -1,55 +1,18 @@
+---
+layout: default
+---
 
+<div class="posts">
+  {% for post in site.posts %}
+    <article class="post">
 
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
-<html xmlns="http://www.w3.org/1999/xhtml" >
-<head>
-    <link rel="stylesheet" href="main.css">
-    <title>Dennis Shen</title>
-</head>
-<body>
-  <div class="header">
-    <h2>Dennis Shen</h2>
-  </div>
-  
-  <div class="row">
-    <div class="leftcolumn">
-      <div class="card">
-        <h2>AWS</h2>
-        <h5>12/29/2019</h5>
-        <p>One of the major challenges of working with AWS is working with IAM. 
-          Everything is built around IAM and having permission to do whatever technical action.
-        As an engineer the experience of knowing that I need a set of permissions for my role to
-      utilize to do an action like reading from DynamoDB has made my job much easier. For example
-      in a typical cloudformation policy something like aws::table would be sufficient to read objects
-      from that table, but if i wanted to read from the index of said table I would have to modify the
-      permission respectively</p>
+      <div class="entry">
+        {{ post.excerpt }}
       </div>
-      
-    </div>
-    <div class="rightcolumn">
-      <div class="card">
-        <h2>About Me</h2>
-        
-        <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-      </div>
-      <div class="card">
-        <h3>Popular Post</h3>
-        <div class="fakeimg">Image</div><br>
-        <div class="fakeimg">Image</div><br>
-        <div class="fakeimg">Image</div>
-      </div>
-      <div class="card">
-        <h3>Follow Me</h3>
-        <p>Some text..</p>
-      </div>
-    </div>
-  </div>
-  
-  <div class="footer">
-    <a href='https://github.com/dtshen'>Github</a>
-    <a href='https://www.linkedin.com/in/dtshen/'>LinkedIn</a>
-  </div> 
 
-  
-</body>
-</html>
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+    </article>
+  {% endfor %}
+</div>
