@@ -1,6 +1,9 @@
 # dtshen-website
 
 Personal website code forked from jeckyll now
+Dependencies
+Ruby
+Jekyll
 
 Build
 ```
